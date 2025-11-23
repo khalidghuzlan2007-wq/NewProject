@@ -1,0 +1,130 @@
+/*خلفيه الموقع*/
+html{
+background-color: black;
+}
+
+
+
+/*البرجراف و صور المعهد*/
+section{
+  opacity: 0;
+  transform: translateY(50px);
+  animation: fadeInText 2s ease-out forwards;
+  font-size: 0.9em;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-style: italic;
+  font-weight: 550;
+  color: red;
+  text-align: center;
+  
+  margin: 50px auto;
+  max-width: 90%;
+}
+
+@keyframes fadeInText {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+/*وضع العنوان في النص*/
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+
+
+
+/* شكل نيون ازرق العنوان*/
+h1 {
+  color: #00f;
+  text-align: center;
+  font-size: 3em;
+  font-family: 'Arial', sans-serif;
+  text-shadow:
+    0 0 5px #00f,
+    0 0 10px #00f,
+    0 0 20px #00f,
+    0 0 40px #00f,
+    0 0 80px #00f;
+  animation: glow 2s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+  from {
+    text-shadow:
+      0 0 3px #00f,
+      0 0 7px #00f,
+      0 0 15px #00f,
+      0 0 30px #00f,
+      0 0 70px #00f;
+  }
+  to {
+    text-shadow:
+      0 0 10px #00f,
+      0 0 20px #00f,
+      0 0 30px #00f,
+      0 0 60px #00f,
+      0 0 100px #00f;
+  }
+}
+
+
+
+
+
+/*انيميشن الضغط علي صورة المعهد*/
+.icon:active,
+.himitPhoto:active {
+  transform: scale(0.9);
+  filter: brightness(80%);
+  transition: transform 0.3s, filter 0.3s;
+}
+/*حلقه نيون حول صور المعهد*/
+.himitPhoto{
+  border-radius: 10px;
+  animation: neonGlow 2s infinite alternate;
+  transition: 0.3s;
+}
+
+@keyframes neonGlow {
+  0% {
+    box-shadow: 0 0 5px #ff0000,
+                0 0 10px #ff0000,
+                0 0 20px #ff0000,
+                0 0 40px #ff0000;
+  }
+  100% {
+    box-shadow: 0 0 5px #0000ff,
+                0 0 10px #0000ff,
+                0 0 20px #0000ff,
+                0 0 40px #0000ff;
+  }
+}
+
+.himitPhoto {
+  display: block;
+  margin: 20px auto;
+  border-radius: 15px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.3);
+  transition: transform 0.3s ease;
+}
+
+
+
+/*شكل حقوق الملكية*/
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  color: white;
+  text-align: center;
+  text-shadow: 2px 2px 4px black;
+  padding: 10px 0;
+  font-size: 0.9em;
+}
