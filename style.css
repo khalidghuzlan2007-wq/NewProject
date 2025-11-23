@@ -1,33 +1,26 @@
-/* خلفية الموقع */
-html {
-  background-color: #111;
-  color: #fff;
+/*خلفيه الموقع*/
+html{
+background-color: black;
 }
 
-/* قسم التعريف وصور المعهد */
-section {
+
+
+/*البرجراف و صور المعهد*/
+section{
   opacity: 0;
   transform: translateY(50px);
   animation: fadeInText 2s ease-out forwards;
-  font-size: 1.1em;
+  font-size: 0.9em;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   font-style: italic;
-  font-weight: 500;
-  color: #ffd700;
+  font-weight: 550;
+  color: red;
   text-align: center;
+  
   margin: 50px auto;
   max-width: 90%;
 }
 
-section p {
-  color: #ffd700;
-  margin-bottom: 10px;
-  font-size: 1.1em;
-  font-style: normal;
-  font-weight: 400;
-}
-
-/* التأثير عند الظهور */
 @keyframes fadeInText {
   to {
     opacity: 1;
@@ -35,14 +28,19 @@ section p {
   }
 }
 
-/* وضع العنوان في النص */
+
+/*وضع العنوان في النص*/
 header {
   display: flex;
   justify-content: center;
   align-items: center;
+  
 }
 
-/* عنوان نيو ن أزرق */
+
+
+
+/* شكل نيون ازرق العنوان*/
 h1 {
   color: #00f;
   text-align: center;
@@ -76,17 +74,24 @@ h1 {
   }
 }
 
-/* صور المعهد */
-.himitPhoto {
-  display: block;
-  margin: 20px auto;
-  border-radius: 15px;
-  box-shadow: 0 0 15px rgba(0,0,0,0.3);
-  animation: neonGlow 2s infinite alternate;
+
+
+
+
+/*انيميشن الضغط علي صورة المعهد*/
+.icon:active,
+.himitPhoto:active {
+  transform: scale(0.9);
+  filter: brightness(80%);
   transition: transform 0.3s, filter 0.3s;
 }
+/*حلقه نيون حول صور المعهد*/
+.himitPhoto{
+  border-radius: 10px;
+  animation: neonGlow 2s infinite alternate;
+  transition: 0.3s;
+}
 
-/* حلقة نيون حول صورة المعهد */
 @keyframes neonGlow {
   0% {
     box-shadow: 0 0 5px #ff0000,
@@ -102,31 +107,22 @@ h1 {
   }
 }
 
-/* أيقونات التواصل وصورة المعهد عند النقر */
-.icon:active,
-.himitPhoto:active {
-  transform: scale(0.9);
-  filter: brightness(80%);
+.himitPhoto {
+  display: block;
+  margin: 20px auto;
+  border-radius: 15px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.3);
+  transition: transform 0.3s ease;
 }
 
-/* روابط الأيقونات الاجتماعية */
-.icon img {
-  border-radius: 50%;
-  box-shadow: 0 0 10px #2228, 0 0 30px #3335;
-  transition: transform 0.3s, box-shadow 0.3s;
-}
 
-.icon:hover img {
-  transform: scale(1.15) rotate(-10deg);
-  box-shadow: 0 0 25px #00f7, 0 0 40px #00f5;
-}
 
-/* شكل حقوق الملكية */
+/*شكل حقوق الملكية*/
 footer {
   position: fixed;
   bottom: 0;
   width: 100%;
-  color: #fff;
+  color: white;
   text-align: center;
   text-shadow: 2px 2px 4px black;
   padding: 10px 0;
